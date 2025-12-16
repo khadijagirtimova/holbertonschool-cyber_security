@@ -1,2 +1,2 @@
 #!/bin/bash
-md5sum -c "$1"
+echo "$2  $1" | sha256sum -c -
