@@ -1,2 +1,2 @@
 #!/bin/bash
-[ "$(sha256sum "$1" | cut -d' ' -f1)" = "$2" ] && echo OK || echo FAIL
+if [ "$(sha256sum "$1" | cut -d' ' -f1)" = "$2" ]; then echo OK; else echo FAIL; fi
