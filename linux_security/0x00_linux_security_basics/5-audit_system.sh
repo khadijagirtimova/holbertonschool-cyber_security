@@ -1,2 +1,2 @@
 #!/bin/bash
-sudo lyns
+sudo lynis
