@@ -1,2 +1,2 @@
 #!/bin/bash
-whois "$1" | awk -F': ' 
+whois Registrant "$1" | awk -F': ' 
