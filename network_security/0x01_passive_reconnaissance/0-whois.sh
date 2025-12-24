@@ -1,2 +1,2 @@
 #!/bin/bash
-whois Registrant Admin "$1" | awk -F': ' 
+whois Registrant Admin Tech "$1" | awk -F': ' 
