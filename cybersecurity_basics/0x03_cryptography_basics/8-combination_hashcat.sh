@@ -1,9 +1,2 @@
-password
-passworld
-pass000
-123word
-123world
-123000
-helloword
-helloworld
-hello000
+#!/bin/bash
+hashcat --stdout -a 1 "$1" "$2"
