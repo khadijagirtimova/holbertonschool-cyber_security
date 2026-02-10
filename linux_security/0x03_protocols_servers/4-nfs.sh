@@ -1,2 +1,2 @@
 #!/bin/bash
-showmount -e localhost 2>/dev/null | grep -v "Export list"
+showmount -e "$1" 2>/dev/null | grep -v "Export list"
