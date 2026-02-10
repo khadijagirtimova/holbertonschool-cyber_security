@@ -1,2 +1,2 @@
 #!/bin/bash
-semanage user -l
+getsebool -a
