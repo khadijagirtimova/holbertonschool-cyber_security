@@ -1,2 +1,2 @@
 #!/bin/bash
-grep -r "public" /etc/snmp/ 2>/dev/null | grep -v "^#"
+grep -E "^\s*rocommunity\s+public|^\s*com2sec\s+.*public" /etc/snmp/snmpd.conf 2>/dev/null
