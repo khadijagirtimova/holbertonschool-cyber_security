@@ -7,7 +7,7 @@ def error():
     sys.exit(1)
 
 
-
+# Check arguments
 if len(sys.argv) != 4:
     error()
 
@@ -20,7 +20,7 @@ if len(replace) > len(search):
     sys.exit(1)
 
 
-
+# Step 1: Find heap addresses
 heap_start = None
 heap_end = None
 
@@ -43,7 +43,7 @@ if heap_start is None:
     sys.exit(1)
 
 
-
+# Step 2: Read and write memory
 try:
     with open("/proc/{}/mem".format(pid), "rb+") as mem:
         mem.seek(heap_start)
