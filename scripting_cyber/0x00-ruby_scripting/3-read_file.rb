@@ -3,5 +3,8 @@
 require 'json'
 
 def count_user_ids(path)
-  JSON.parse(File.read(path)).map { |item| item['userId'] }.tally
+  data = JSON.parse(File.read(path))
+  counts = data.map { |item| item['userId'] }.tally
+  
+  counts.each { |user_id, count| puts "#{user_id}: #{count}" }
 end
